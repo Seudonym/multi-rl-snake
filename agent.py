@@ -143,6 +143,10 @@ def test(model_file):
 
 
 if __name__ == "__main__":
-    # train()
-    # train("models/model_70.pth")
-    test("models/model.pth")
+    mode = input("1.Train\n2.Test\nEnter choice:")
+    if mode == "1":
+        train("models/model.pth")
+    elif mode == "2":
+        test("models/best.pth")
+    else:
+        print("Invalid choice!")
